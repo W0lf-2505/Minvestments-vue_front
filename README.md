@@ -1,6 +1,6 @@
 # Minvestments Platform  
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://github.com/W0lf-2505/Minvestments-vue_front/blob/main/LICENSE)
 
 This repository contains the Vue.js frontend for **Minvestments Platform**, a dynamic platform featuring a secure login system for clients to access personalized investment and trading statistics. The platform seamlessly integrates real-time data, allowing clients to stay informed about their financial portfolios. In addition to financial insights, the application provides curated sections for both domestic and global important news, ensuring users are well-informed about market trends and events that may impact their investments. This multifaceted application serves as a centralized hub for clients, offering a user-friendly interface and valuable data for making informed financial decisions.. The frontend integrates seamlessly with the backend hosted at **[(https://minvestments.codesacure.com)]**.  
 
