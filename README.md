@@ -36,6 +36,8 @@ Ensure you have the following installed:
 1. Clone the repository:  
    git clone https://github.com/W0lf-2505/Minvestments-vue_front.git
    cd Minvestments-vue_front
+
+2. Installation:
    yarn install
    yarn vite
 
