@@ -33,11 +33,13 @@ Ensure you have the following installed:
 - **npm** or **yarn**  
 
 ### Installation  
-1. Clone the repository:  
+1. Clone the repository:
+   ```bash
    git clone https://github.com/W0lf-2505/Minvestments-vue_front.git
    cd Minvestments-vue_front
 
-2. Installation:
+3. Installation:
+   ```bash
    yarn install
    yarn vite
 
