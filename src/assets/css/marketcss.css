@@ -1,0 +1,68 @@
+/* Overall container for the watchlist sidebar */
+.marketwatch-sidebar {
+    height: 600px; /* Set the desired height for the sidebar */
+    background-color: #fff; /* Optional: Set background color */
+    border: 1px solid #ddd; /* Optional: Add a border */
+  }
+  
+  /* Search bar section */
+  .omnisearch {
+    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border */
+  }
+  
+  .search-header {
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .search-input-field {
+    width: 100%; /* Make the search input full width */
+    border: 1px solid #ccc; /* Optional: Add a border to the input field */
+    padding: 5px; /* Adjust padding for the input field */
+  }
+  
+  .counts {
+    font-size: 12px; /* Adjust font size for the count text */
+    color: #999; /* Optional: Set the color for the count text */
+  }
+  
+  /* Watchlist items container */
+  .instruments {
+    flex: 1; /* Make this section take up the remaining space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  .vddl-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Watchlist selector (optional) */
+  .marketwatch-selector {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-top: 10px; /* Add some margin on top */
+    border-top: 1px solid #ddd; /* Optional: Add a top border */
+  }
+  
+  .marketwatch-selector li {
+    display: inline-block; /* Display list items inline */
+    padding: 5px 10px; /* Add padding to each item */
+    cursor: pointer; /* Make items clickable */
+  }
+  
+  .marketwatch-selector li.selected {
+    background-color: #eee; /* Optional: Style the selected item */
+    color: #000;
+  }
+  
+  /* Settings icon (optional) */
+  .settings {
+    text-align: center; /* Center the settings icon */
+    padding: 10px; /* Add some padding around the icon */
+  }
+  
+  .settings-button {
+    font-size: 16px; /* Adjust the size of the settings icon */
+    color: #999; /* Optional: Set the color for the settings icon */
+  }
+  

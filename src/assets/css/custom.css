@@ -1,0 +1,33 @@
+/* top logo css */
+.top-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%; /* Adjust the percentage as needed */
+    max-width: 500px; /* Set a maximum width of 300 pixels */
+    height: auto; /* This ensures the aspect ratio is maintained */
+  }
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px; /* Adjust the padding as needed */
+  /* box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1); /* Add a subtle box shadow if desired */
+  /* z-index: 10; /* Use a high z-index value to ensure it's on top */
+/* }  */
+
+.downstick {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Or right: 0; for right-aligned */
+  width: 100%; /* Optional: Set width if needed */
+}
+
+.watchlist-down-stick {
+  flex: 0 0 auto; /* Flex shorthand for grow/shrink/basis */
+  margin-top: auto; /* Pushes the element to the bottom */
+}

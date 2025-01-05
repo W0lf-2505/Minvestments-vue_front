@@ -1,0 +1,448 @@
+import { createRouter, createWebHashHistory } from "vue-router";
+import NotFound from '../views/NotFound.vue';
+import Dashboard from "../components/Dashboard.vue";
+import License from "../components/License.vue"
+import Signin from "../components/Signin.vue";
+import Portfolio from "../components/Portfolio.vue";
+import Marketnews from "../components/Marketnews.vue";
+
+import Adduser from "../components/Adduser.vue";
+import Automotive from "../views/dashboards/Automotive.vue";
+import SmartHome from "../views/dashboards/SmartHome.vue";
+import VRDefault from "../components/VRDefault.vue";
+import VRInfo from "../views/dashboards/vr/VRInfo.vue";
+import CRM from "../views/dashboards/CRM.vue";
+import Overview from "../components/profile/Overview.vue";
+import Overviewe from "../views/pages/profile/Overview.vue";
+import Teams from "../views/pages/profile/Teams.vue";
+import Projects from "../views/pages/profile/Projects.vue";
+import General from "../views/pages/projects/General.vue";
+import Timeline from "../views/pages/projects/Timeline.vue";
+import NewProject from "../views/pages/projects/NewProject.vue";
+import Pricing from "../views/pages/Pricing.vue";
+import RTL from "../views/pages/Rtl.vue";
+import Charts from "../views/pages/Charts.vue";
+import SweetAlerts from "../views/pages/SweetAlerts.vue";
+import Notifications from "../views/pages/Notifications.vue";
+import Kanban from "../views/applications/Kanban.vue";
+import Wizard from "../views/applications/wizard/Wizard.vue";
+import DataTables from "../views/applications/DataTables.vue";
+import Calendar from "../views/applications/Calendar.vue";
+import Analytics from "@/components/analytics/Analytics.vue";
+import EcommerceOverview from "../views/ecommerce/overview/Overview.vue";
+import NewProduct from "../views/ecommerce/products/NewProduct.vue";
+import EditProduct from "../views/ecommerce/EditProduct.vue";
+import ProductPage from "../views/ecommerce/ProductPage.vue";
+import ProductsList from "../views/ecommerce/ProductsList.vue";
+import OrderDetails from "../views/ecommerce/Orders/OrderDetails.vue";
+import OrderList from "../views/ecommerce/Orders/OrderList.vue";
+import Referral from "../views/ecommerce/Referral.vue";
+import Reports from "../views/pages/Users/Reports.vue";
+import NewUser from "../views/pages/Users/NewUser.vue";
+import Settings from "../views/pages/Account/Settings.vue";
+import Billing from "../views/pages/Account/Billing.vue";
+import Invoice from "../views/pages/Account/Invoice.vue";
+import Security from "../views/pages/Account/Security.vue";
+import Widgets from "../views/pages/Widgets.vue";
+import Basic from "../views/auth/signin/Basic.vue";
+import Cover from "../views/auth/signin/Cover.vue";
+import Illustration from "../views/auth/signin/Illustration.vue";
+import ResetBasic from "../views/auth/reset/Basic.vue";
+import ResetCover from "../views/auth/reset/Cover.vue";
+import ResetIllustration from "../views/auth/reset/Illustration.vue";
+import VerificationBasic from "../views/auth/verification/Basic.vue";
+import VerificationCover from "../views/auth/verification/Cover.vue";
+import VerificationIllustration from "../views/auth/verification/Illustration.vue";
+import SignupBasic from "../views/auth/signup/Basic.vue";
+import SignupCover from "../views/auth/signup/Cover.vue";
+import SignupIllustration from "../views/auth/signup/Illustration.vue";
+import Error404 from "../views/auth/error/Error404.vue";
+import Error500 from "../views/auth/error/Error500.vue";
+import lockBasic from "../views/auth/lock/Basic.vue";
+import lockCover from "../views/auth/lock/Cover.vue";
+import lockIllustration from "../views/auth/lock/Illustration.vue";
+
+
+const routes = [
+  {
+    path: "/",
+    name: "/",
+    redirect: "/dashboard",
+    meta: { title: '/', resource: 'dashboard', action: 'manage' },
+  },
+  {
+    path: "/dashboard",
+    name: "Default",
+    component: Dashboard,
+    meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  },
+
+  {
+    path: "/signin",
+    name: "Signin",
+    component: Signin,
+    meta: { title: 'Login', resource: 'auth', redirectIfLoggedIn: true }
+  },
+
+  {
+    path: "/license",
+    name: "License",
+    component: License,
+    meta: { title: 'License'}
+  },
+
+  {
+    path: "/portfolio",
+    name: "Portfolio",
+    component: Portfolio,
+    meta: { title: 'Portfolio', resource: 'dashboard', action: 'manage' }
+  },
+
+  {
+    path: "/marketnews",
+    name: "Marketnews",
+    component: Marketnews,
+    meta: { title: 'Marketnews', resource: 'dashboard', action: 'manage' }
+  },
+
+  {
+    path: "/listingusers",
+    name: "listingusers",
+    component: Adduser,
+    meta: { title: 'listingusers', resource: 'root_jobs', action: 'superu' },
+  },
+
+  {
+    path: "/analytics",
+    name: "Analytics",
+    component: Analytics,
+    meta: { title: 'Analytics', resource: 'dashboard', action: 'manage' },
+  },
+  {
+    path: "/vr_dashboard",
+    name: "VR Default",
+    component: VRDefault,
+    meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  },
+  {
+     path: "/profile/overview",
+     name: "Profile Overview",
+     component: Overview,
+     meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+   },
+  // {
+  //   path: "/dashboards/automotive",
+  //   name: "Automotive",
+  //   component: Automotive,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/dashboards/smart-home",
+  //   name: "Smart Home",
+  //   component: SmartHome,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/dashboards/vr/vr-info",
+  //   name: "VR Info",
+  //   component: VRInfo,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/dashboards/crm",
+  //   name: "CRM",
+  //   component: CRM,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/profile/Overviewe",
+  //   name: "Profile Overviewe",
+  //   component: Overviewe,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/profile/teams",
+  //   name: "Teams",
+  //   component: Teams,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/profile/projects",
+  //   name: "All Projects",
+  //   component: Projects,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/projects/general",
+  //   name: "General",
+  //   component: General,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/projects/timeline",
+  //   name: "Timeline",
+  //   component: Timeline,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/projects/new-project",
+  //   name: "New Project",
+  //   component: NewProject,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/pricing-page",
+  //   name: "Pricing Page",
+  //   component: Pricing,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/rtl-page",
+  //   name: "RTL",
+  //   component: RTL,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/charts",
+  //   name: "Charts",
+  //   component: Charts,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/widgets",
+  //   name: "Widgets",
+  //   component: Widgets,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/sweet-alerts",
+  //   name: "Sweet Alerts",
+  //   component: SweetAlerts,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/notifications",
+  //   name: "Notifications",
+  //   component: Notifications,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/applications/kanban",
+  //   name: "Kanban",
+  //   component: Kanban,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/applications/wizard",
+  //   name: "Wizard",
+  //   component: Wizard,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/applications/data-tables",
+  //   name: "Data Tables",
+  //   component: DataTables,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/applications/calendar",
+  //   name: "Calendar",
+  //   component: Calendar,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/overview",
+  //   name: "Overview",
+  //   component: EcommerceOverview,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/products/new-product",
+  //   name: "New Product",
+  //   component: NewProduct,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/products/edit-product",
+  //   name: "Edit Product",
+  //   component: EditProduct,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/products/product-page",
+  //   name: "Product Page",
+  //   component: ProductPage,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/products/products-list",
+  //   name: "Products List",
+  //   component: ProductsList,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/Orders/order-details",
+  //   name: "Order Details",
+  //   component: OrderDetails,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/Orders/order-list",
+  //   name: "Order List",
+  //   component: OrderList,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/ecommerce/referral",
+  //   name: "Referral",
+  //   component: Referral,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/users/reports",
+  //   name: "Reports",
+  //   component: Reports,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/users/new-user",
+  //   name: "New User",
+  //   component: NewUser,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/account/settings",
+  //   name: "Settings",
+  //   component: Settings,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/account/billing",
+  //   name: "Billing",
+  //   component: Billing,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/account/invoice",
+  //   name: "Invoice",
+  //   component: Invoice,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/pages/account/Security",
+  //   name: "Security",
+  //   component: Security,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signin/basic",
+  //   name: "Signin Basic",
+  //   component: Basic,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signin/cover",
+  //   name: "Signin Cover",
+  //   component: Cover,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signin/illustration",
+  //   name: "Signin Illustration",
+  //   component: Illustration,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/reset/basic",
+  //   name: "Reset Basic",
+  //   component: ResetBasic,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/reset/cover",
+  //   name: "Reset Cover",
+  //   component: ResetCover,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/reset/illustration",
+  //   name: "Reset Illustration",
+  //   component: ResetIllustration,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/lock/basic",
+  //   name: "Lock Basic",
+  //   component: lockBasic,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/lock/cover",
+  //   name: "Lock Cover",
+  //   component: lockCover,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/lock/illustration",
+  //   name: "Lock Illustration",
+  //   component: lockIllustration,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/verification/basic",
+  //   name: "Verification Basic",
+  //   component: VerificationBasic,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/verification/cover",
+  //   name: "Verification Cover",
+  //   component: VerificationCover,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/verification/illustration",
+  //   name: "Verification Illustration",
+  //   component: VerificationIllustration,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signup/basic",
+  //   name: "Signup Basic",
+  //   component: SignupBasic,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signup/cover",
+  //   name: "Signup Cover",
+  //   component: SignupCover,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/signup/illustration",
+  //   name: "Signup Illustration",
+  //   component: SignupIllustration,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/error/error404",
+  //   name: "Error Error404",
+  //   component: Error404,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  // {
+  //   path: "/authentication/error/error500",
+  //   name: "Error Error500",
+  //   component: Error500,
+  //   meta: { title: 'Default', resource: 'dashboard', action: 'manage' },
+  // },
+  { path: '/:catchAll(.*)*', name: 'unauthorized', component: NotFound, meta: { title: 'Login', resource: 'dashboard', action: 'manage' } },
+];
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes,
+  linkActiveClass: "active",
+});
+
+export default router;
