@@ -21,7 +21,9 @@ You can try out the live platform at:
 ### Demo Account Information  
 To explore the platform, use the following demo account credentials:  
 - **Username**: `demo@codesacure.com`  
-- **Password**: `1234`  
+- **Password**: `1234`
+
+note - Trading features are not available for demo user. If you want to try trading and have an ICICI Direct account. I can provide access.
 
 ---
 
